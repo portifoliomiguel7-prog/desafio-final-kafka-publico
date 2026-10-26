@@ -1,0 +1,156 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H08/security-inventory.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "7a034c9a243b204a952f6164416d90d3578845e4fe15e8a3b61d3a5d4f242fb0"
+    }
+  ],
+  "data": {
+    "status": "OFFICIAL_READBACK_AND_HISTORICAL_ACCESS_PROOFS",
+    "acls": {
+      "utc": "2026-10-13T19:17:15.836980+00:00",
+      "command": [
+        "confluent",
+        "kafka",
+        "acl",
+        "list",
+        "--cluster",
+        "LAB_LKC_6",
+        "--environment",
+        "LAB_ENV_5",
+        "-o",
+        "json"
+      ],
+      "returncode": 0,
+      "response": [
+        {
+          "principal": "User:LAB_SA_7",
+          "permission": "ALLOW",
+          "operation": "DESCRIBE",
+          "resource_type": "GROUP",
+          "resource_name": "desafio-",
+          "pattern_type": "PREFIXED"
+        },
+        {
+          "principal": "User:LAB_SA_7",
+          "permission": "ALLOW",
+          "operation": "DESCRIBE",
+          "resource_type": "TOPIC",
+          "resource_name": "desafio.",
+          "pattern_type": "PREFIXED"
+        },
+        {
+          "principal": "User:LAB_SA_7",
+          "permission": "ALLOW",
+          "operation": "READ",
+          "resource_type": "GROUP",
+          "resource_name": "desafio-",
+          "pattern_type": "PREFIXED"
+        },
+        {
+          "principal": "User:LAB_SA_7",
+          "permission": "ALLOW",
+          "operation": "READ",
+          "resource_type": "TOPIC",
+          "resource_name": "desafio.",
+          "pattern_type": "PREFIXED"
+        },
+        {
+          "principal": "User:LAB_SA_4",
+          "permission": "ALLOW",
+          "operation": "CREATE",
+          "resource_type": "TOPIC",
+          "resource_name": "desafio.",
+          "pattern_type": "PREFIXED"
+        },
+        {
+          "principal": "User:LAB_SA_4",
+          "permission": "ALLOW",
+          "operation": "DESCRIBE",
+          "resource_type": "CLUSTER",
+          "resource_name": "kafka-cluster",
+          "pattern_type": "LITERAL"
+        },
+        {
+          "principal": "User:LAB_SA_4",
+          "permission": "ALLOW",
+          "operation": "DESCRIBE",
+          "resource_type": "TOPIC",
+          "resource_name": "desafio.",
+          "pattern_type": "PREFIXED"
+        },
+        {
+          "principal": "User:LAB_SA_4",
+          "permission": "ALLOW",
+          "operation": "DESCRIBE_CONFIGS",
+          "resource_type": "CLUSTER",
+          "resource_name": "kafka-cluster",
+          "pattern_type": "LITERAL"
+        },
+        {
+          "principal": "User:LAB_SA_4",
+          "permission": "ALLOW",
+          "operation": "WRITE",
+          "resource_type": "TOPIC",
+          "resource_name": "desafio.",
+          "pattern_type": "PREFIXED"
+        }
+      ],
+      "error": null
+    },
+    "runner_rbac_environment_scope": {
+      "utc": "2026-10-13T19:17:19.134802+00:00",
+      "command": [
+        "confluent",
+        "iam",
+        "rbac",
+        "role-binding",
+        "list",
+        "--principal",
+        "User:LAB_SA_1",
+        "--environment",
+        "LAB_ENV_5",
+        "--inclusive",
+        "-o",
+        "json"
+      ],
+      "returncode": 0,
+      "response": [
+        {
+          "id": "LAB_RB_8",
+          "principal": "User:LAB_SA_1",
+          "role": "EnvironmentAdmin",
+          "environment": "LAB_ENV_5",
+          "cloud_cluster": "",
+          "cluster_type": "",
+          "logical_cluster": "",
+          "resource_type": "",
+          "name": "",
+          "pattern_type": ""
+        },
+        {
+          "id": "LAB_RB_9",
+          "principal": "User:LAB_SA_1",
+          "role": "FlinkDeveloper",
+          "environment": "LAB_ENV_5",
+          "cloud_cluster": "",
+          "cluster_type": "",
+          "logical_cluster": "",
+          "resource_type": "Compute-Pool",
+          "name": "LAB_LFCP_2",
+          "pattern_type": "LITERAL"
+        }
+      ],
+      "error": null
+    },
+    "scope_limit": "Runner environment and descendants only, not exhaustive organization/global permissions; PostgreSQL privileges are historical H03 proof, not new readback",
+    "exception": "cdc_user has neon_superuser, REPLICATION, CREATEDB, CREATEROLE, BYPASSRLS and effective DML privileges in H03; strict least privilege not reached. Flink runner EnvironmentAdmin is also broader than Compute-Pool FlinkDeveloper.",
+    "permission_mutations": 0
+  }
+}

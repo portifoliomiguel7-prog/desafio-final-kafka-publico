@@ -1,0 +1,292 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/resume-fraud-raw-decoded.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "18c13764145fa04910c32ac1118d9c4e6169129a0f7f5d57c41d1406fcbd618f"
+    },
+    {
+      "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/P1-insert-result.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "af34a346ccbf8045cd1303b7531646500d04309d2f81e0d32b1f91414825313d"
+    },
+    {
+      "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/resume-P1-alert-verification.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "a6168ea3d6f692bc1ba1ea1e455c8dec9620935385b1301d09736b493068ee76"
+    },
+    {
+      "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/P1-before.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "0c349cc43ab36154b19f33393f782ff3b9bf8f8af2c126a5a9334b15802a0412"
+    },
+    {
+      "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/activation-boundary.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "c0c6440b609df16d6484c704cb145dda8f8f26f3ecaab9f55e70b394e553f130"
+    }
+  ],
+  "data": {
+    "alert": {
+      "topic": "desafio.fraud.detected",
+      "partition": 0,
+      "offset": 0,
+      "kafka_timestamp": [
+        1,
+        1791373415515
+      ],
+      "schema_ids": {
+        "key": 100016,
+        "value": 100015
+      },
+      "key": {
+        "alert_id": "7c11ae30c556ddc3c02e377b6db6923600a47a849588cc287ae5f368f5470f2c"
+      },
+      "value": {
+        "rule_code": "RULE_VELOCITY",
+        "rule_version": "RULE_VELOCITY-v1",
+        "semantic": "CREATION_EVENT",
+        "card_id": 1,
+        "txn_count": 3,
+        "first_event_time": "2026-10-07 11:49:04.626000+00:00",
+        "last_event_time": "2026-10-07 11:49:44.626000+00:00",
+        "interval_ms": 40000,
+        "tx1_id": 102001,
+        "tx1_time": "2026-10-07 11:49:04.626000+00:00",
+        "tx1_amount": "10.11",
+        "tx1_status": "APPROVED",
+        "tx2_id": 102002,
+        "tx2_time": "2026-10-07 11:49:24.626000+00:00",
+        "tx2_amount": "11.11",
+        "tx2_status": "DECLINED",
+        "tx3_id": 102003,
+        "tx3_time": "2026-10-07 11:49:44.626000+00:00",
+        "tx3_amount": "12.11",
+        "tx3_status": "REVERSED"
+      },
+      "headers": [],
+      "row_kind": "+I",
+      "observed_at": "2026-10-07T18:25:31.160542+00:00"
+    },
+    "creation_events": [
+      {
+        "topic": "desafio.transactions.fraud.events",
+        "partition": 0,
+        "offset": 0,
+        "kafka_timestamp": [
+          1,
+          1791373297221
+        ],
+        "schema_ids": {
+          "key": 100013,
+          "value": 100014
+        },
+        "key": {
+          "transaction_id": 102001
+        },
+        "value": {
+          "card_id": 1,
+          "account_id": 43,
+          "amount": "10.11",
+          "currency": "BRL",
+          "transaction_status": "APPROVED",
+          "occurred_at": "2026-10-07T11:49:04.626000Z",
+          "account_status": "ACTIVE",
+          "event_time": "2026-10-07 11:49:04.626000+00:00"
+        },
+        "headers": [],
+        "row_kind": "+I",
+        "observed_at": "2026-10-07T18:25:32.158594+00:00"
+      },
+      {
+        "topic": "desafio.transactions.fraud.events",
+        "partition": 0,
+        "offset": 1,
+        "kafka_timestamp": [
+          1,
+          1791373297300
+        ],
+        "schema_ids": {
+          "key": 100013,
+          "value": 100014
+        },
+        "key": {
+          "transaction_id": 102002
+        },
+        "value": {
+          "card_id": 1,
+          "account_id": 43,
+          "amount": "11.11",
+          "currency": "BRL",
+          "transaction_status": "DECLINED",
+          "occurred_at": "2026-10-07T11:49:24.626000Z",
+          "account_status": "ACTIVE",
+          "event_time": "2026-10-07 11:49:24.626000+00:00"
+        },
+        "headers": [],
+        "row_kind": "+I",
+        "observed_at": "2026-10-07T18:25:32.158653+00:00"
+      },
+      {
+        "topic": "desafio.transactions.fraud.events",
+        "partition": 0,
+        "offset": 2,
+        "kafka_timestamp": [
+          1,
+          1791373297301
+        ],
+        "schema_ids": {
+          "key": 100013,
+          "value": 100014
+        },
+        "key": {
+          "transaction_id": 102003
+        },
+        "value": {
+          "card_id": 1,
+          "account_id": 43,
+          "amount": "12.11",
+          "currency": "BRL",
+          "transaction_status": "REVERSED",
+          "occurred_at": "2026-10-07T11:49:44.626000Z",
+          "account_status": "ACTIVE",
+          "event_time": "2026-10-07 11:49:44.626000+00:00"
+        },
+        "headers": [],
+        "row_kind": "+I",
+        "observed_at": "2026-10-07T18:25:32.158683+00:00"
+      }
+    ],
+    "insert_rows": [
+      {
+        "transaction_id": 102001,
+        "card_id": 1,
+        "account_id": 43,
+        "merchant_id": 1,
+        "amount": "10.11",
+        "currency": "BRL",
+        "status": "APPROVED",
+        "occurred_at": "2026-10-07 11:49:04.626000+00:00",
+        "created_at": "2026-10-07 11:49:04.626000+00:00",
+        "updated_at": "2026-10-07 11:49:04.626000+00:00"
+      },
+      {
+        "transaction_id": 102002,
+        "card_id": 1,
+        "account_id": 43,
+        "merchant_id": 1,
+        "amount": "11.11",
+        "currency": "BRL",
+        "status": "DECLINED",
+        "occurred_at": "2026-10-07 11:49:24.626000+00:00",
+        "created_at": "2026-10-07 11:49:24.626000+00:00",
+        "updated_at": "2026-10-07 11:49:24.626000+00:00"
+      },
+      {
+        "transaction_id": 102003,
+        "card_id": 1,
+        "account_id": 43,
+        "merchant_id": 1,
+        "amount": "12.11",
+        "currency": "BRL",
+        "status": "REVERSED",
+        "occurred_at": "2026-10-07 11:49:44.626000+00:00",
+        "created_at": "2026-10-07 11:49:44.626000+00:00",
+        "updated_at": "2026-10-07 11:49:44.626000+00:00"
+      }
+    ],
+    "verification": {
+      "status": "PASS_ALERT_FIELDS_ONLY",
+      "observed_after_interruption": true,
+      "planned_advancer_submitted": false,
+      "proof": [
+        {
+          "alert_id": "7c11ae30c556ddc3c02e377b6db6923600a47a849588cc287ae5f368f5470f2c",
+          "canonical": "RULE_VELOCITY-v1|CREATION_EVENT|1|102001,102002,102003|2026-10-07 11:49:04.626|2026-10-07 11:49:44.626",
+          "interval_ms": 40000,
+          "txn_count": 3,
+          "witness_ids": [
+            102001,
+            102002,
+            102003
+          ],
+          "status": "PASS"
+        }
+      ]
+    },
+    "before_boundaries": {
+      "desafio.payments.accounts": {
+        "partition": 0,
+        "low": 0,
+        "high_exclusive": 482
+      },
+      "desafio.payments.transactions": {
+        "partition": 0,
+        "low": 0,
+        "high_exclusive": 4007
+      },
+      "desafio.transactions.enriched": {
+        "partition": 0,
+        "low": 0,
+        "high_exclusive": 2005
+      },
+      "desafio.transactions.fraud.events": {
+        "partition": 0,
+        "low": 0,
+        "high_exclusive": 0
+      },
+      "desafio.fraud.detected": {
+        "partition": 0,
+        "low": 0,
+        "high_exclusive": 0
+      }
+    },
+    "activation": {
+      "stage": "H07_RUNTIME_BOUNDARY_FROZEN",
+      "utc": "2026-10-07T11:36:39.643173+00:00",
+      "H07_RUNTIME_ACTIVATION_OFFSET": 2005,
+      "partition": 0,
+      "inclusive_start": 2005,
+      "high_exclusive": 2005,
+      "SQL_rendered": "-- BRIDGE PLANNER PASS — NOT RUN\n-- H07_RUNTIME_ACTIVATION_OFFSET MUST BE CAPTURED IMMEDIATELY BEFORE FIRST SUBMISSION\n-- Replace the placeholder only after fresh partition/boundary checks and runtime authorization.\n-- C4 planner evidence; runner LAB_SA_1 / pool LAB_LFCP_2 / session UTC.\nINSERT INTO `desafio.transactions.fraud.events`\nWITH h07_activation_source AS (\n  SELECT *\n  FROM `desafio.transactions.enriched`\n  /*+ OPTIONS(\n    'scan.startup.mode'='specific-offsets',\n    'scan.startup.specific-offsets'='partition:0,offset:2005'\n  ) */\n)\nSELECT\n  transaction_id,\n  card_id,\n  account_id,\n  amount,\n  currency,\n  transaction_status,\n  occurred_at,\n  account_status,\n  event_time\nFROM TO_CHANGELOG(\n  input => TABLE h07_activation_source,\n  op => DESCRIPTOR(change_op),\n  op_mapping => MAP['INSERT','INSERT']\n);\n",
+      "sha256": "6ddf7424fcf7b7241b485a4523969247d142a0fee1d95d713554059ff3aee4a2",
+      "H06": "RUNNING",
+      "CDC": "HEALTHY",
+      "MATCH": "RUNNING",
+      "fraud_events": "EMPTY",
+      "boundaries": {
+        "desafio.payments.accounts": {
+          "partition": 0,
+          "low": 0,
+          "high_exclusive": 482
+        },
+        "desafio.payments.transactions": {
+          "partition": 0,
+          "low": 0,
+          "high_exclusive": 4007
+        },
+        "desafio.transactions.enriched": {
+          "partition": 0,
+          "low": 0,
+          "high_exclusive": 2005
+        },
+        "desafio.transactions.fraud.events": {
+          "partition": 0,
+          "low": 0,
+          "high_exclusive": 0
+        },
+        "desafio.fraud.detected": {
+          "partition": 0,
+          "low": 0,
+          "high_exclusive": 0
+        }
+      },
+      "pre_activation_extra_events": "NONE"
+    }
+  }
+}

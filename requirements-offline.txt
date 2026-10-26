@@ -1,0 +1,2 @@
+# Existing version used by the evidence auditors; setup does not install packages.
+fastavro==1.12.2

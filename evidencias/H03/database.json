@@ -1,0 +1,617 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H03/database-results.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "fbd1663282e34080c20e97675f1a91a33b758b07ba87506133aaa96476e6e310"
+    }
+  ],
+  "data": {
+    "dataset": {
+      "customers": {
+        "count": 200,
+        "sha256": "8cb564847d945baa07cdf5e73cacc886b8348fb995e810c7a827e93b64742bd2"
+      },
+      "accounts": {
+        "count": 240,
+        "sha256": "4ea8b7ba5e631312c7cc632f336601574b36f414232bb26399a4281b0efb30f8"
+      },
+      "cards": {
+        "count": 320,
+        "sha256": "3631215b3606cd1d19c162da2ea8c72a32dcaf4ea356298df1c41e16f5c499e4"
+      },
+      "merchants": {
+        "count": 60,
+        "sha256": "a517c70fd4eebe41612332b576e006bdd383a4e2aa938423d05eff624202dbaf"
+      },
+      "transactions": {
+        "count": 2000,
+        "sha256": "36ddaf14802606ccc24c2e47537044d45a5498261ddf50c7ea253f7c5978025e"
+      }
+    },
+    "constraints": [
+      {
+        "table_name": "accounts",
+        "conname": "accounts_account_id_check",
+        "contype": "c",
+        "definition": "CHECK ((account_id > 0))"
+      },
+      {
+        "table_name": "accounts",
+        "conname": "accounts_balance_check",
+        "contype": "c",
+        "definition": "CHECK ((balance >= (0)::numeric))"
+      },
+      {
+        "table_name": "accounts",
+        "conname": "accounts_check",
+        "contype": "c",
+        "definition": "CHECK ((updated_at >= created_at))"
+      },
+      {
+        "table_name": "accounts",
+        "conname": "accounts_currency_check",
+        "contype": "c",
+        "definition": "CHECK ((currency = 'BRL'::bpchar))"
+      },
+      {
+        "table_name": "accounts",
+        "conname": "accounts_customer_id_fkey",
+        "contype": "f",
+        "definition": "FOREIGN KEY (customer_id) REFERENCES payments.customers(customer_id)"
+      },
+      {
+        "table_name": "accounts",
+        "conname": "accounts_pkey",
+        "contype": "p",
+        "definition": "PRIMARY KEY (account_id)"
+      },
+      {
+        "table_name": "accounts",
+        "conname": "accounts_status_check",
+        "contype": "c",
+        "definition": "CHECK ((status = ANY (ARRAY['ACTIVE'::text, 'SUSPENDED'::text])))"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_account_id_fkey",
+        "contype": "f",
+        "definition": "FOREIGN KEY (account_id) REFERENCES payments.accounts(account_id)"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_card_id_account_id_key",
+        "contype": "u",
+        "definition": "UNIQUE (card_id, account_id)"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_card_id_check",
+        "contype": "c",
+        "definition": "CHECK ((card_id > 0))"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_card_token_key",
+        "contype": "u",
+        "definition": "UNIQUE (card_token)"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_check",
+        "contype": "c",
+        "definition": "CHECK ((updated_at >= created_at))"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_pkey",
+        "contype": "p",
+        "definition": "PRIMARY KEY (card_id)"
+      },
+      {
+        "table_name": "cards",
+        "conname": "cards_status_check",
+        "contype": "c",
+        "definition": "CHECK ((status = ANY (ARRAY['ACTIVE'::text, 'BLOCKED'::text, 'EXPIRED'::text])))"
+      },
+      {
+        "table_name": "customers",
+        "conname": "customers_customer_id_check",
+        "contype": "c",
+        "definition": "CHECK ((customer_id > 0))"
+      },
+      {
+        "table_name": "customers",
+        "conname": "customers_pkey",
+        "contype": "p",
+        "definition": "PRIMARY KEY (customer_id)"
+      },
+      {
+        "table_name": "customers",
+        "conname": "customers_status_check",
+        "contype": "c",
+        "definition": "CHECK ((status = ANY (ARRAY['ACTIVE'::text, 'INACTIVE'::text])))"
+      },
+      {
+        "table_name": "merchants",
+        "conname": "merchants_category_check",
+        "contype": "c",
+        "definition": "CHECK ((category = ANY (ARRAY['RETAIL'::text, 'FOOD'::text, 'SERVICES'::text])))"
+      },
+      {
+        "table_name": "merchants",
+        "conname": "merchants_merchant_id_check",
+        "contype": "c",
+        "definition": "CHECK ((merchant_id > 0))"
+      },
+      {
+        "table_name": "merchants",
+        "conname": "merchants_pkey",
+        "contype": "p",
+        "definition": "PRIMARY KEY (merchant_id)"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_account_id_fkey",
+        "contype": "f",
+        "definition": "FOREIGN KEY (account_id) REFERENCES payments.accounts(account_id)"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_amount_check",
+        "contype": "c",
+        "definition": "CHECK ((amount > (0)::numeric))"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_card_id_account_id_fkey",
+        "contype": "f",
+        "definition": "FOREIGN KEY (card_id, account_id) REFERENCES payments.cards(card_id, account_id)"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_card_id_fkey",
+        "contype": "f",
+        "definition": "FOREIGN KEY (card_id) REFERENCES payments.cards(card_id)"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_check",
+        "contype": "c",
+        "definition": "CHECK ((updated_at >= created_at))"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_currency_check",
+        "contype": "c",
+        "definition": "CHECK ((currency = 'BRL'::bpchar))"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_merchant_id_fkey",
+        "contype": "f",
+        "definition": "FOREIGN KEY (merchant_id) REFERENCES payments.merchants(merchant_id)"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_pkey",
+        "contype": "p",
+        "definition": "PRIMARY KEY (transaction_id)"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_status_check",
+        "contype": "c",
+        "definition": "CHECK ((status = ANY (ARRAY['APPROVED'::text, 'DECLINED'::text, 'REVERSED'::text])))"
+      },
+      {
+        "table_name": "transactions",
+        "conname": "transactions_transaction_id_check",
+        "contype": "c",
+        "definition": "CHECK ((transaction_id > 0))"
+      }
+    ],
+    "columns": [
+      {
+        "table_name": "accounts",
+        "column_name": "account_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "accounts",
+        "column_name": "customer_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "accounts",
+        "column_name": "status",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "accounts",
+        "column_name": "balance",
+        "data_type": "numeric",
+        "is_nullable": "NO",
+        "numeric_precision": 15,
+        "numeric_scale": 2
+      },
+      {
+        "table_name": "accounts",
+        "column_name": "currency",
+        "data_type": "character",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "accounts",
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "accounts",
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "cards",
+        "column_name": "card_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "cards",
+        "column_name": "account_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "cards",
+        "column_name": "card_token",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "cards",
+        "column_name": "status",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "cards",
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "cards",
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "customers",
+        "column_name": "customer_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "customers",
+        "column_name": "display_name",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "customers",
+        "column_name": "status",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "customers",
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "merchants",
+        "column_name": "merchant_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "merchants",
+        "column_name": "display_name",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "merchants",
+        "column_name": "category",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "merchants",
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "transaction_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "card_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "account_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "merchant_id",
+        "data_type": "bigint",
+        "is_nullable": "NO",
+        "numeric_precision": 64,
+        "numeric_scale": 0
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "amount",
+        "data_type": "numeric",
+        "is_nullable": "NO",
+        "numeric_precision": 15,
+        "numeric_scale": 2
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "currency",
+        "data_type": "character",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "status",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "occurred_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      },
+      {
+        "table_name": "transactions",
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "NO",
+        "numeric_precision": null,
+        "numeric_scale": null
+      }
+    ],
+    "indexes": [
+      {
+        "tablename": "accounts",
+        "indexname": "accounts_customer_idx",
+        "indexdef": "CREATE INDEX accounts_customer_idx ON payments.accounts USING btree (customer_id)"
+      },
+      {
+        "tablename": "accounts",
+        "indexname": "accounts_pkey",
+        "indexdef": "CREATE UNIQUE INDEX accounts_pkey ON payments.accounts USING btree (account_id)"
+      },
+      {
+        "tablename": "cards",
+        "indexname": "cards_account_idx",
+        "indexdef": "CREATE INDEX cards_account_idx ON payments.cards USING btree (account_id)"
+      },
+      {
+        "tablename": "cards",
+        "indexname": "cards_card_id_account_id_key",
+        "indexdef": "CREATE UNIQUE INDEX cards_card_id_account_id_key ON payments.cards USING btree (card_id, account_id)"
+      },
+      {
+        "tablename": "cards",
+        "indexname": "cards_card_token_key",
+        "indexdef": "CREATE UNIQUE INDEX cards_card_token_key ON payments.cards USING btree (card_token)"
+      },
+      {
+        "tablename": "cards",
+        "indexname": "cards_pkey",
+        "indexdef": "CREATE UNIQUE INDEX cards_pkey ON payments.cards USING btree (card_id)"
+      },
+      {
+        "tablename": "customers",
+        "indexname": "customers_pkey",
+        "indexdef": "CREATE UNIQUE INDEX customers_pkey ON payments.customers USING btree (customer_id)"
+      },
+      {
+        "tablename": "merchants",
+        "indexname": "merchants_pkey",
+        "indexdef": "CREATE UNIQUE INDEX merchants_pkey ON payments.merchants USING btree (merchant_id)"
+      },
+      {
+        "tablename": "transactions",
+        "indexname": "transactions_account_idx",
+        "indexdef": "CREATE INDEX transactions_account_idx ON payments.transactions USING btree (account_id)"
+      },
+      {
+        "tablename": "transactions",
+        "indexname": "transactions_card_time_idx",
+        "indexdef": "CREATE INDEX transactions_card_time_idx ON payments.transactions USING btree (card_id, occurred_at)"
+      },
+      {
+        "tablename": "transactions",
+        "indexname": "transactions_merchant_idx",
+        "indexdef": "CREATE INDEX transactions_merchant_idx ON payments.transactions USING btree (merchant_id)"
+      },
+      {
+        "tablename": "transactions",
+        "indexname": "transactions_pkey",
+        "indexdef": "CREATE UNIQUE INDEX transactions_pkey ON payments.transactions USING btree (transaction_id)"
+      }
+    ],
+    "account_status": {
+      "ACTIVE": "ALLOWED",
+      "SUSPENDED": "ALLOWED",
+      "BLOCKED": {
+        "result": "REJECTED",
+        "sqlstate": "23514",
+        "constraint": "accounts_status_check"
+      }
+    },
+    "seed_nonempty_guard": "PASS",
+    "no_residual_changes": "PASS",
+    "replica_identity": [
+      {
+        "relname": "accounts",
+        "relreplident": "f"
+      },
+      {
+        "relname": "cards",
+        "relreplident": "f"
+      },
+      {
+        "relname": "transactions",
+        "relreplident": "f"
+      }
+    ],
+    "cdc_attributes": [
+      {
+        "rolname": "cdc_user",
+        "rolcanlogin": true,
+        "rolsuper": false,
+        "rolinherit": true,
+        "rolcreaterole": true,
+        "rolcreatedb": true,
+        "rolreplication": true,
+        "rolbypassrls": true
+      },
+      {
+        "rolname": "neon_superuser",
+        "rolcanlogin": false,
+        "rolsuper": false,
+        "rolinherit": true,
+        "rolcreaterole": true,
+        "rolcreatedb": true,
+        "rolreplication": true,
+        "rolbypassrls": true
+      }
+    ],
+    "cdc_effective_privileges": [
+      {
+        "tablename": "accounts",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "tablename": "cards",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "tablename": "customers",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "tablename": "merchants",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "tablename": "transactions",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      }
+    ],
+    "database_gate": "PASS_WITH_APPROVED_LAB_SECURITY_EXCEPTION"
+  }
+}

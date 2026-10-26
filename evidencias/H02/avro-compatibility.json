@@ -1,0 +1,118 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H02/contract-results.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "12d61ef49eaa2dcc812cb598e458eb3530196544e895e5336c5e636a5b427a86"
+    }
+  ],
+  "data": {
+    "date_utc": "2026-10-02T12:51:55.723604+00:00",
+    "subject": "desafio.pedido-value",
+    "classification": "PROJECT DECISION approved by owner",
+    "status": "PASS",
+    "steps": [
+      {
+        "name": "register_v1",
+        "method": "POST",
+        "path": "/subjects/desafio.pedido-value/versions",
+        "http_status": 200,
+        "response": {
+          "id": 100001
+        }
+      },
+      {
+        "name": "validate_v2",
+        "method": "POST",
+        "path": "/compatibility/subjects/desafio.pedido-value/versions/latest?verbose=true",
+        "http_status": 200,
+        "response": {
+          "is_compatible": true,
+          "messages": []
+        }
+      },
+      {
+        "name": "register_v2",
+        "method": "POST",
+        "path": "/subjects/desafio.pedido-value/versions",
+        "http_status": 200,
+        "response": {
+          "id": 100002
+        }
+      },
+      {
+        "name": "validate_v3",
+        "method": "POST",
+        "path": "/compatibility/subjects/desafio.pedido-value/versions/latest?verbose=true",
+        "http_status": 200,
+        "response": {
+          "is_compatible": false,
+          "messages": [
+            "{errorType:\"READER_FIELD_MISSING_DEFAULT_VALUE\", description:\"The field 'risk_level' at path '/fields/6' in the new schema has no default value and is missing in the old schema\", additionalInfo:\"risk_level\"}",
+            "{oldSchemaVersion: 2}",
+            "{oldSchema: '{\"type\":\"record\",\"name\":\"Pedido\",\"namespace\":\"com.bootcamp.payments\",\"doc\":\"Project-defined synthetic H02 contract; not a reconstruction of course schemas.\",\"fields\":[{\"name\":\"pedido_id\",\"type\":\"string\"},{\"name\":\"customer_id\",\"type\":\"string\",\"confluent:tags\":[\"PII\"]},{\"name\":\"card_token\",\"type\":\"string\",\"doc\":\"Synthetic token only; never PAN or CVV.\",\"confluent:tags\":[\"PCI\"]},{\"name\":\"amount\",\"type\":{\"type\":\"bytes\",\"logicalType\":\"decimal\",\"precision\":15,\"scale\":2}},{\"name\":\"currency\",\"type\":\"string\"},{\"name\":\"channel\",\"type\":[\"null\",\"string\"],\"default\":null}]}'}",
+            "{validateFields: 'true', compatibility: 'BACKWARD'}"
+          ]
+        }
+      },
+      {
+        "name": "register_v3_rejected",
+        "method": "POST",
+        "path": "/subjects/desafio.pedido-value/versions",
+        "http_status": 409,
+        "response": {
+          "error_code": 40901,
+          "message": "Schema being registered is incompatible with an earlier schema for subject \"desafio.pedido-value\", details: [{errorType:\"READER_FIELD_MISSING_DEFAULT_VALUE\", description:\"The field 'risk_level' at path '/fields/6' in the new schema has no default value and is missing in the old schema\", additionalInfo:\"risk_level\"}, {oldSchemaVersion: 2}, {oldSchema: '{\"type\":\"record\",\"name\":\"Pedido\",\"namespace\":\"com.bootcamp.payments\",\"doc\":\"Project-defined synthetic H02 contract; not a reconstruction of course schemas.\",\"fields\":[{\"name\":\"pedido_id\",\"type\":\"string\"},{\"name\":\"customer_id\",\"type\":\"string\",\"confluent:tags\":[\"PII\"]},{\"name\":\"card_token\",\"type\":\"string\",\"doc\":\"Synthetic token only; never PAN or CVV.\",\"confluent:tags\":[\"PCI\"]},{\"name\":\"amount\",\"type\":{\"type\":\"bytes\",\"logicalType\":\"decimal\",\"precision\":15,\"scale\":2}},{\"name\":\"currency\",\"type\":\"string\"},{\"name\":\"channel\",\"type\":[\"null\",\"string\"],\"default\":null}]}'}, {validateFields: 'true', compatibility: 'BACKWARD'}]"
+        }
+      },
+      {
+        "name": "versions_after",
+        "method": "GET",
+        "path": "/subjects/desafio.pedido-value/versions",
+        "http_status": 200,
+        "response": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "read_version_1",
+        "method": "GET",
+        "path": "/subjects/desafio.pedido-value/versions/1",
+        "http_status": 200,
+        "response": {
+          "subject": "desafio.pedido-value",
+          "version": 1,
+          "id": 100001,
+          "schema": "{\"type\":\"record\",\"name\":\"Pedido\",\"namespace\":\"com.bootcamp.payments\",\"doc\":\"Project-defined synthetic H02 contract; not a reconstruction of course schemas.\",\"fields\":[{\"name\":\"pedido_id\",\"type\":\"string\"},{\"name\":\"customer_id\",\"type\":\"string\",\"confluent:tags\":[\"PII\"]},{\"name\":\"card_token\",\"type\":\"string\",\"doc\":\"Synthetic token only; never PAN or CVV.\",\"confluent:tags\":[\"PCI\"]},{\"name\":\"amount\",\"type\":{\"type\":\"bytes\",\"logicalType\":\"decimal\",\"precision\":15,\"scale\":2}},{\"name\":\"currency\",\"type\":\"string\"}]}"
+        }
+      },
+      {
+        "name": "read_version_2",
+        "method": "GET",
+        "path": "/subjects/desafio.pedido-value/versions/2",
+        "http_status": 200,
+        "response": {
+          "subject": "desafio.pedido-value",
+          "version": 2,
+          "id": 100002,
+          "schema": "{\"type\":\"record\",\"name\":\"Pedido\",\"namespace\":\"com.bootcamp.payments\",\"doc\":\"Project-defined synthetic H02 contract; not a reconstruction of course schemas.\",\"fields\":[{\"name\":\"pedido_id\",\"type\":\"string\"},{\"name\":\"customer_id\",\"type\":\"string\",\"confluent:tags\":[\"PII\"]},{\"name\":\"card_token\",\"type\":\"string\",\"doc\":\"Synthetic token only; never PAN or CVV.\",\"confluent:tags\":[\"PCI\"]},{\"name\":\"amount\",\"type\":{\"type\":\"bytes\",\"logicalType\":\"decimal\",\"precision\":15,\"scale\":2}},{\"name\":\"currency\",\"type\":\"string\"},{\"name\":\"channel\",\"type\":[\"null\",\"string\"],\"default\":null}]}"
+        }
+      },
+      {
+        "name": "subject_config_after",
+        "method": "GET",
+        "path": "/config/desafio.pedido-value",
+        "http_status": 200,
+        "response": {
+          "compatibilityLevel": "BACKWARD"
+        }
+      }
+    ]
+  }
+}

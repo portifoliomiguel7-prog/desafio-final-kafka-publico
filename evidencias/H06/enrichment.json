@@ -1,0 +1,55 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H06/enrichment-gate.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "3d0db2b3cc9c1d25e26c1db18e26d982abe9391642c4137cd056296471370371"
+    }
+  ],
+  "data": {
+    "status": "PASS",
+    "statement": "desafio-h06-enrichment",
+    "statement_status": "RUNNING",
+    "explain_final": "PASS / COMPLETED / StreamTemporalJoin / specific-offsets / retract / no NDU rejection",
+    "logical_current_rows": 2000,
+    "logical_pk_coverage": {
+      "status": "PASS",
+      "expected_count": 2000,
+      "observed_keys": 2000,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_logical_ids": [],
+      "transaction100001": "ABSENT",
+      "transaction100002": "ABSENT"
+    },
+    "all_nine_fields": "PASS",
+    "transaction1": {
+      "transaction_id": 1,
+      "card_id": 43,
+      "account_id": 85,
+      "amount": "80.61",
+      "currency": "BRL",
+      "transaction_status": "APPROVED",
+      "occurred_at": "2026-01-04T00:02:00.000000Z",
+      "account_status": "ACTIVE",
+      "event_time": "2026-01-04T00:02:00.000+00:00"
+    },
+    "transaction1_source_offset": 2003,
+    "account85_source_offset": 325,
+    "business_time_preserved": "PASS",
+    "limitations": [
+      "Latest source offsets not exposed by statement describe (null); numeric startup corroborated by exact SQL, H06-I bounded runtime proof and source audit",
+      "Kafka high 2005 differs from 2004 application messages; consumer reached high; offset2004 did not return an application message, cause NOT IDENTIFIED WITH CERTAINTY",
+      "Boundary contract is one recovery baseline plus future CDC; a new recovery invalidates it; no automatic guard deployed",
+      "CFU observed, no accumulated billing estimate",
+      "TIMESTAMP_LTZ(3) does not preserve fractions below milliseconds; current data has no such loss",
+      "H07 updating/retract analysis and PLAN still required"
+    ],
+    "current_committed_state": "NOT_PROVEN"
+  }
+}

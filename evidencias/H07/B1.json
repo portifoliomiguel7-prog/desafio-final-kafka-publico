@@ -1,0 +1,32 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/B1-diagnostic.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "64ecd352ecf9a14283e9a5b060a27b0bcc833add6f12f2fab8132c0c21bd05d6"
+    }
+  ],
+  "data": {
+    "status": "FAIL_INTERVAL_MS",
+    "alert_id": "30911e6069a5a50273e35df53797a020140f20ef7cb78d465311c7d57b7544f7",
+    "canonical": "RULE_VELOCITY-v1|CREATION_EVENT|5|106001,106002,106003|2026-10-08 00:06:41.866|2026-10-08 00:07:41.865",
+    "SHA256": "PASS",
+    "witnesses": "PASS",
+    "witness_ids": [
+      106001,
+      106002,
+      106003
+    ],
+    "txn_count": 3,
+    "expected_interval_ms": 59999,
+    "observed_interval_ms": 59000,
+    "alert_count": 1,
+    "after_cleanup": "PRESERVED_EXACTLY_ONCE",
+    "root_cause": "NOT_ESTABLISHED; published TIMESTAMPDIFF(MILLISECOND, ...) differs from exact timestamp subtraction; no SQL change or resubmission"
+  }
+}

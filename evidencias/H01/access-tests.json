@@ -1,0 +1,71 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H01/04-access-tests.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "09997ac2f339f953b796bac624b879307837e6868bdd7779295baafcd1bc1ea4"
+    }
+  ],
+  "data": {
+    "date_utc": "2026-10-02T11:40:50.340080+00:00",
+    "classification": "HARNESS VALIDATION RESOURCE",
+    "topic": "desafio.h01.access-check",
+    "consumer_group": "desafio-h01-consumer",
+    "tests": [
+      {
+        "test": "producer_write_allowed",
+        "expected": [
+          null
+        ],
+        "observed": {
+          "error": null,
+          "partition": 0,
+          "offset": 0
+        },
+        "status": "PASS"
+      },
+      {
+        "test": "consumer_read_allowed",
+        "expected": [
+          null
+        ],
+        "observed": {
+          "error": null,
+          "partition": 0,
+          "offset": 0,
+          "payload_matches": true
+        },
+        "status": "PASS"
+      },
+      {
+        "test": "consumer_write_denied",
+        "expected": [
+          "TOPIC_AUTHORIZATION_FAILED"
+        ],
+        "observed": {
+          "error": "TOPIC_AUTHORIZATION_FAILED",
+          "partition": 0,
+          "offset": null
+        },
+        "status": "PASS"
+      },
+      {
+        "test": "producer_read_denied",
+        "expected": [
+          "GROUP_AUTHORIZATION_FAILED",
+          "TOPIC_AUTHORIZATION_FAILED"
+        ],
+        "observed": {
+          "error": "GROUP_AUTHORIZATION_FAILED"
+        },
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H08/observability.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "21c30e5251f4389d8638e13500e6ad33a4e4c98f0b926eab20d53e48f1046ee1"
+    }
+  ],
+  "data": {
+    "status": "PARTIAL_DESCRIPTORS_AND_INVENTORY_ONLY",
+    "received_bytes": {
+      "status": "NOT_MEASURED_MISSING_METRICS_CREDENTIAL",
+      "peak": null,
+      "peak_timestamp": null,
+      "consulted_interval": null,
+      "unit": "By",
+      "sampling": "60 seconds per descriptor; counter aggregates over time by sum"
+    },
+    "consumer_lag": {
+      "status": "NOT_MEASURED_NO_REPORTED_GROUP_AND_MISSING_METRICS_CREDENTIAL",
+      "group": null,
+      "topic": null,
+      "value": null,
+      "unit": "offsets",
+      "consulted_interval": null,
+      "eligible_group_confirmed": false,
+      "interpretation": "CLI returned empty list; manual assign consumers do not expose group lag; no metric absence means zero"
+    },
+    "query_count": 0,
+    "aggregation_policy": "Descriptor COUNTER_INT64 / GAUGE_INT64; omit agg so server selects metric-specific function; counter time sum, gauge time average. Spatial lag aggregation not measured.",
+    "blocker": "No usable resource-management-scoped Metrics API credential in authorized local environment or accessible key inventory. No key/role created and no CLI token extracted."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "type": "record",
+  "name": "Pedido",
+  "namespace": "com.bootcamp.payments",
+  "doc": "Project-defined synthetic H02 contract; not a reconstruction of course schemas.",
+  "fields": [
+    {
+      "name": "pedido_id",
+      "type": "string"
+    },
+    {
+      "name": "customer_id",
+      "type": "string",
+      "confluent:tags": [
+        "PII"
+      ]
+    },
+    {
+      "name": "card_token",
+      "type": "string",
+      "doc": "Synthetic token only; never PAN or CVV.",
+      "confluent:tags": [
+        "PCI"
+      ]
+    },
+    {
+      "name": "amount",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 15,
+        "scale": 2
+      }
+    },
+    {
+      "name": "currency",
+      "type": "string"
+    },
+    {
+      "name": "channel",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "risk_level",
+      "type": "string"
+    }
+  ]
+}

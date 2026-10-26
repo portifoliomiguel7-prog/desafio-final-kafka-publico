@@ -1,0 +1,67 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H04/connector.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "6e454312d24e152bfab448baba4af983d733ab919d784790dbc3acc0067db067"
+    }
+  ],
+  "data": {
+    "utc": "2026-10-02T16:42:08.297774+00:00",
+    "connector": {
+      "id": "LAB_LCC_3",
+      "name": "desafio-cdc",
+      "status": "RUNNING",
+      "type": "source"
+    },
+    "tasks": [
+      {
+        "task": 0,
+        "state": "RUNNING"
+      }
+    ],
+    "approved_config_matches": true,
+    "config": {
+      "after.state.only": "false",
+      "authentication.method": "Password",
+      "connector.class": "PostgresCdcSourceV2",
+      "database.dbname": "neondb",
+      "database.port": "5432",
+      "database.sslmode": "require",
+      "database.user": "cdc_user",
+      "decimal.handling.mode": "precise",
+      "heartbeat.interval.ms": "60000",
+      "kafka.auth.mode": "SERVICE_ACCOUNT",
+      "kafka.service.account.id": "LAB_SA_4",
+      "key.converter.key.subject.name.strategy": "TopicNameStrategy",
+      "name": "desafio-cdc",
+      "output.data.format": "AVRO",
+      "output.key.format": "AVRO",
+      "provide.transaction.metadata": "false",
+      "publication.autocreate.mode": "disabled",
+      "publication.name": "bootcamp_cdc_pub",
+      "slot.drop.on.stop": "false",
+      "slot.name": "desafio_cdc_slot",
+      "snapshot.mode": "initial",
+      "table.include.list": "payments.accounts,payments.cards,payments.transactions",
+      "tasks.max": "1",
+      "time.precision.mode": "adaptive",
+      "tombstones.on.delete": "true",
+      "topic.creation.topic_prefix_match.cleanup.policy": "delete",
+      "topic.creation.topic_prefix_match.partitions": "1",
+      "topic.creation.topic_prefix_match.retention.bytes": "-1",
+      "topic.creation.topic_prefix_match.retention.ms": "604800000",
+      "topic.heartbeat.prefix": "desafio.heartbeat",
+      "topic.prefix": "desafio",
+      "value.converter.auto.register.schemas": "true",
+      "value.converter.connect.meta.data": "true",
+      "value.converter.value.subject.name.strategy": "TopicNameStrategy"
+    },
+    "submission_note": "CLI create returned Unauthorized after resource creation; authenticated readback confirms RUNNING. No second creation."
+  }
+}

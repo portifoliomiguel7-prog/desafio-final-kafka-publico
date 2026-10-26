@@ -1,0 +1,487 @@
+{
+  "H09": "PARTIAL — PUBLIC_RELEASE_CANDIDATE_PREPARED",
+  "source_git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "publication": "AUTHORIZED_SANITIZED_EXPORT",
+  "public_repository": "portifoliomiguel7-prog/desafio-final-kafka-publico",
+  "original_repository": "PRIVATE",
+  "H10": "PENDING",
+  "H07": "PARTIAL — ACADEMIC CORE EVIDENCED",
+  "H08": "PARTIAL — Metrics NOT_MEASURED",
+  "files": {
+    ".gitignore": {
+      "export_sha256": "5d19ce1a364c7c5c00bfe2343520fded1e012bee370f76cab5f7435c9a1a5cd8",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": ".gitignore",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "5d19ce1a364c7c5c00bfe2343520fded1e012bee370f76cab5f7435c9a1a5cd8"
+        }
+      ]
+    },
+    ".env.example": {
+      "export_sha256": "c0542ea6df775a815a54e2a92d2e80592e47febec61281c24c2fd771a3b64f8c",
+      "transformation": "COPY_WITH_PRIVACY_SUBSTITUTIONS_AND_TEMPLATE_ADAPTATION",
+      "private_sources": [
+        {
+          "private_path": ".env.example",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "e7b835fdb2dc5a3d32476cc41553fab548ff4431a7298d4dc2c4dc02afe1241e"
+        }
+      ]
+    },
+    "setup.sh": {
+      "export_sha256": "006bff930bdb441fba009e4e794218eab26a95113f8c306cdd1a943ba35915b2",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "setup.sh",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "006bff930bdb441fba009e4e794218eab26a95113f8c306cdd1a943ba35915b2"
+        }
+      ]
+    },
+    "teardown.sh": {
+      "export_sha256": "a6afab777d303f40a9eeb9090f59d1d01c3a1c243cfaa31cd4a665af03df5e6d",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "teardown.sh",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "a6afab777d303f40a9eeb9090f59d1d01c3a1c243cfaa31cd4a665af03df5e6d"
+        }
+      ]
+    },
+    "requirements-offline.txt": {
+      "export_sha256": "b8bc18085da074cdbfe19cc30c0d5701f89cf0b2566fd310e27144e6744de1c5",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "requirements-offline.txt",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "b8bc18085da074cdbfe19cc30c0d5701f89cf0b2566fd310e27144e6744de1c5"
+        }
+      ]
+    },
+    "connectors/cdc.json": {
+      "export_sha256": "3d7c9d73387c2fd466122d566bd00b23359732ff4fa5747902a50175b945dde5",
+      "transformation": "COPY_WITH_PRIVACY_SUBSTITUTIONS_AND_TEMPLATE_ADAPTATION",
+      "private_sources": [
+        {
+          "private_path": "connectors/cdc.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "690671c9cb6bb304f66241665e697a49ff3de3a5e1def6b7561ac063a7a01d90"
+        }
+      ]
+    },
+    "harness/checks/h09-prepare.py": {
+      "export_sha256": "d8b6291353d6cc13fcd8b285d00ac7a825b66be9287f9a3df01f693a389810e9",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "harness/checks/h09-prepare.py",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "d8b6291353d6cc13fcd8b285d00ac7a825b66be9287f9a3df01f693a389810e9"
+        }
+      ]
+    },
+    "harness/checks/test_h09_prepare.py": {
+      "export_sha256": "651897d76adc148d77d37548d951ae0ea7f2cc3ab8c371f5c1668c03a3f12f06",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "harness/checks/test_h09_prepare.py",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "651897d76adc148d77d37548d951ae0ea7f2cc3ab8c371f5c1668c03a3f12f06"
+        }
+      ]
+    },
+    "dataset/neon/sql/01_ddl.sql": {
+      "export_sha256": "8163da89e3eacc627a188594bf5c2000e5a4286e3afabfb24581427d62894c0c",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "dataset/neon/sql/01_ddl.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "8163da89e3eacc627a188594bf5c2000e5a4286e3afabfb24581427d62894c0c"
+        }
+      ]
+    },
+    "dataset/neon/sql/02_seed.sql": {
+      "export_sha256": "deb331ed29dad18316a0f218ac7df625d8ed20953c59ec989b61358535df3dc8",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "dataset/neon/sql/02_seed.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "deb331ed29dad18316a0f218ac7df625d8ed20953c59ec989b61358535df3dc8"
+        }
+      ]
+    },
+    "dataset/neon/sql/03_cdc_setup.sql": {
+      "export_sha256": "9e2ab63b71383090d5be447d8a7791cb79fec5d53565446899edef5cac09a72d",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "dataset/neon/sql/03_cdc_setup.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "9e2ab63b71383090d5be447d8a7791cb79fec5d53565446899edef5cac09a72d"
+        }
+      ]
+    },
+    "schemas/pedido-v1.avsc": {
+      "export_sha256": "4dec0c3df7787f0ceb57cdc8a6bd74ef45e88c695aeeee361a45a2d4221a1106",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "schemas/pedido-v1.avsc",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "4dec0c3df7787f0ceb57cdc8a6bd74ef45e88c695aeeee361a45a2d4221a1106"
+        }
+      ]
+    },
+    "schemas/pedido-v2.avsc": {
+      "export_sha256": "8f82d1fc4acd243c7b7133fa97eaa3d4f0544c7c3fc35915c86b9d7ee1629738",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "schemas/pedido-v2.avsc",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "8f82d1fc4acd243c7b7133fa97eaa3d4f0544c7c3fc35915c86b9d7ee1629738"
+        }
+      ]
+    },
+    "schemas/pedido-v3-quebra.avsc": {
+      "export_sha256": "bdeddeaf468d1464dc0c171ebb744448d13d59e0ef11a059ac699d4c634c6cdb",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "schemas/pedido-v3-quebra.avsc",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "bdeddeaf468d1464dc0c171ebb744448d13d59e0ef11a059ac699d4c634c6cdb"
+        }
+      ]
+    },
+    "sql/06-source-primary-keys.sql": {
+      "export_sha256": "ccb2738a8869e844a050c5e299c4f11acc7cc17a2465dfdb882b19b503a4bc06",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "sql/06-source-primary-keys.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "ccb2738a8869e844a050c5e299c4f11acc7cc17a2465dfdb882b19b503a4bc06"
+        }
+      ]
+    },
+    "sql/07-enriched-table.sql": {
+      "export_sha256": "bcfabf2564769376f1729c4dce3c017de08cd5eba247ef523d0f782021a1c504",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "sql/07-enriched-table.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "bcfabf2564769376f1729c4dce3c017de08cd5eba247ef523d0f782021a1c504"
+        }
+      ]
+    },
+    "sql/08-enrichment.sql": {
+      "export_sha256": "f32b143512fb6894a5bde9d18818ef9f9969192dd61c510d36bdd0a23c5d8e71",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "sql/08-enrichment.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "f32b143512fb6894a5bde9d18818ef9f9969192dd61c510d36bdd0a23c5d8e71"
+        }
+      ]
+    },
+    "sql/09a-fraud-events-table.sql": {
+      "export_sha256": "0871fc54f1d541dbe8ffcc86fe4777a97563b4df758f1be20bf408f8a49f0e08",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "sql/09a-fraud-events-table.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "0871fc54f1d541dbe8ffcc86fe4777a97563b4df758f1be20bf408f8a49f0e08"
+        }
+      ]
+    },
+    "sql/09b-fraud-events-bridge.sql": {
+      "export_sha256": "ed0a708f418da7a507ed33f277599f3ffb392518431fcb90c16c670ee5dbb743",
+      "transformation": "COPY_WITH_PRIVACY_SUBSTITUTIONS_AND_TEMPLATE_ADAPTATION",
+      "private_sources": [
+        {
+          "private_path": "sql/09b-fraud-events-bridge.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "eeddcf8ae45f9bbad05b4c6eeba16021d8f1a2f72daf2742de40822856067524"
+        }
+      ]
+    },
+    "sql/10a-fraud-detected-table.sql": {
+      "export_sha256": "d6be4a37e63e41c1d800f541f5d7203d934cc4c228a7b913d9289548ccad3094",
+      "transformation": "UNCHANGED_SOURCE",
+      "private_sources": [
+        {
+          "private_path": "sql/10a-fraud-detected-table.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "d6be4a37e63e41c1d800f541f5d7203d934cc4c228a7b913d9289548ccad3094"
+        }
+      ]
+    },
+    "sql/10b-fraud-match.sql": {
+      "export_sha256": "2f7e3795dcf8030ff18c604b0704675004f3cf5eb59c761863bc328e76a0339f",
+      "transformation": "COPY_WITH_PRIVACY_SUBSTITUTIONS_AND_TEMPLATE_ADAPTATION",
+      "private_sources": [
+        {
+          "private_path": "sql/10b-fraud-match.sql",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "da3f5a49c67172bdae8326cb4c530b49cf5737deaee0d0728439111a637b04cb"
+        }
+      ]
+    },
+    "README.md": {
+      "export_sha256": "48a79580f48b6b69591373e130d906848de025e9ba0995a1482529287d1c8f9a",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "docs/08-reproducao-entrega.md": {
+      "export_sha256": "a12b51fbefe429e86277524d8c59ecaee1bff01c9ae93c3b43702df4d1c228b4",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "docs/09-indice-evidencias.md": {
+      "export_sha256": "f3fd37a87f3dfce20d3c0150c79fad7b4df9f1c52c809f2a21aba26d1f133401",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "docs/07-demonstracao-fraude.md": {
+      "export_sha256": "9796f647b225953f92838d96f28493d14c6206ded3e52423866edaf87d92e209",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "docs/06-operacao.md": {
+      "export_sha256": "f7b87602b7239852e66e541a1b8fcc83882924fffb0abe15c5ff90a027f55f20",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "docs/10-checklist-encerramento.md": {
+      "export_sha256": "ef9e382210751c89993d9948f97dc6999c44594ca32516f0e75d5872281c1c25",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "CHECKLIST.md": {
+      "export_sha256": "511f027543a5c1aaabebc5327dad1b5a1c64b4736584ee62b4addaece49f3854",
+      "transformation": "NEW_ACADEMIC_SUMMARY_NOT_ORIGINAL_RUNTIME_ARTIFACT",
+      "private_sources": []
+    },
+    "evidencias/H09/video-validation.json": {
+      "export_sha256": "013d39fb55cf2a16bf21f4c2e4d6db17075e3a6d0228a9e0bcdb06d00b012f1e",
+      "transformation": "LOCAL_MEDIA_VALIDATION_METADATA_ONLY_NOT_A_CLOUD_EXECUTION",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H09/video-validation.json",
+          "git_base": null,
+          "source_sha256_lf": "013d39fb55cf2a16bf21f4c2e4d6db17075e3a6d0228a9e0bcdb06d00b012f1e"
+        }
+      ]
+    },
+    "harness/checks/public-candidate-check.py": {
+      "export_sha256": "ed2ee1f44a727ac51e72bff02c9a455269e837c34745541b14a0e1e58732f31e",
+      "transformation": "NEW_STANDALONE_OFFLINE_VALIDATOR",
+      "private_sources": []
+    },
+    "harness/checks/verify.sh": {
+      "export_sha256": "c78153b64e6bed545f3db5a241e8ce3dc32773601ef095f3fa91c966110f052c",
+      "transformation": "NEW_PACKAGE_LOCAL_CHECK_NO_GIT_REQUIRED",
+      "private_sources": []
+    },
+    "evidencias/H01/access-tests.json": {
+      "export_sha256": "bdbce58b0f724e54b180f4cbea74551f1ef3aca9656a008706f32763dfb68a7b",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H01/04-access-tests.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "09997ac2f339f953b796bac624b879307837e6868bdd7779295baafcd1bc1ea4"
+        }
+      ]
+    },
+    "evidencias/H02/avro-compatibility.json": {
+      "export_sha256": "ffdfc345457a40600774aa087f9a5e93a21649238dee5a84bb99bf0bdf7005dd",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H02/contract-results.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "12d61ef49eaa2dcc812cb598e458eb3530196544e895e5336c5e636a5b427a86"
+        }
+      ]
+    },
+    "evidencias/H03/database.json": {
+      "export_sha256": "7f5e921a4f2a547767b06a6165e3b8291464dcd91390c57acc97238d7a323886",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H03/database-results.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "fbd1663282e34080c20e97675f1a91a33b758b07ba87506133aaa96476e6e310"
+        }
+      ]
+    },
+    "evidencias/H04/connector.json": {
+      "export_sha256": "57e1b6995189a7cccbf99b1c23c67c321549704668ca53960fffb879be07bc61",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H04/connector.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "6e454312d24e152bfab448baba4af983d733ab919d784790dbc3acc0067db067"
+        }
+      ]
+    },
+    "evidencias/01-envelopes-cdc.json": {
+      "export_sha256": "10f3f00494855a2f6387bc3f6cc1e68d9cef813da15a529f28c4cae6f0449932",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/01-envelopes-cdc.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "fbc9d15a7abfc54effcb925058bff6d3c5fc2a1d1bb8d7377c1baf6e61a7009c"
+        },
+        {
+          "private_path": "evidencias/H05/01-envelopes-cdc.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "99eab44d8ac8cadb7d937045791e3b7b222c9035dce5df0310b6d528cb03164f"
+        }
+      ]
+    },
+    "evidencias/H06/enrichment.json": {
+      "export_sha256": "219581c290725d13632c7559a47a9ee617cb2b038bfab91b00af66cc5a11c6ed",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H06/enrichment-gate.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "3d0db2b3cc9c1d25e26c1db18e26d982abe9391642c4137cd056296471370371"
+        }
+      ]
+    },
+    "evidencias/H07/P1.json": {
+      "export_sha256": "8319f770e0f396a32182d48d744b13795636542edd8a14548aa06d29ddc043a1",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/resume-fraud-raw-decoded.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "18c13764145fa04910c32ac1118d9c4e6169129a0f7f5d57c41d1406fcbd618f"
+        },
+        {
+          "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/P1-insert-result.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "af34a346ccbf8045cd1303b7531646500d04309d2f81e0d32b1f91414825313d"
+        },
+        {
+          "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/resume-P1-alert-verification.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "a6168ea3d6f692bc1ba1ea1e455c8dec9620935385b1301d09736b493068ee76"
+        },
+        {
+          "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/P1-before.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "0c349cc43ab36154b19f33393f782ff3b9bf8f8af2c126a5a9334b15802a0412"
+        },
+        {
+          "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/activation-boundary.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "c0c6440b609df16d6484c704cb145dda8f8f26f3ecaab9f55e70b394e553f130"
+        }
+      ]
+    },
+    "evidencias/H07/N1.json": {
+      "export_sha256": "798ba7e8f2213ea779631a802bee44e6dca85e09e47e37ba3f0559f0c77447c4",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/historical-N1-verification.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "d99e4c5e441419e7c7aa723cc27d875fed053460304a8d77a09d02188ae09d17"
+        }
+      ]
+    },
+    "evidencias/H07/N2.json": {
+      "export_sha256": "dee1ac46adbec5e63b5b60fc0aeb6b61751cf03c5289c628d4c3adb78d8eab06",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/historical-N2-verification.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "38fbcc04fde9e058d2677a5ccba5a86453092b769f35f9d70e50bfc96416d06d"
+        }
+      ]
+    },
+    "evidencias/H07/B1.json": {
+      "export_sha256": "f4f2cebeaec7225153ebab19b391e177aa1f91b41ec157dcea9697e81da0c13e",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/B1-diagnostic.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "64ecd352ecf9a14283e9a5b060a27b0bcc833add6f12f2fab8132c0c21bd05d6"
+        }
+      ]
+    },
+    "evidencias/H08/billing.json": {
+      "export_sha256": "5cde32bdd2b7e7261982b722efc45cf3ce85e1513896362a532c694bac03fc2b",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H08/billing.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "f3dc4a768ceb11883008aafbeb79832ef9e45f933a1b03a914d767655fdc90d5"
+        }
+      ]
+    },
+    "evidencias/H08/security.json": {
+      "export_sha256": "77476b52c87dac8f4ebb3d102f4b730d6ae4362fd16df3770737e4d1f3605bd0",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H08/security-inventory.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "7a034c9a243b204a952f6164416d90d3578845e4fe15e8a3b61d3a5d4f242fb0"
+        }
+      ]
+    },
+    "evidencias/H08/observability.json": {
+      "export_sha256": "c7c301fb27bf53f248987c2ba1bcc8c747a3630a84a44b0e458665967cd2d7ee",
+      "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
+      "private_sources": [
+        {
+          "private_path": "evidencias/H08/observability.json",
+          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "source_sha256_lf": "21c30e5251f4389d8638e13500e6ad33a4e4c98f0b926eab20d53e48f1046ee1"
+        }
+      ]
+    }
+  },
+  "sanitization_occurrences": {
+    "identity_alias_occurrences": 128
+  },
+  "private_alias_mapping_included": false,
+  "cloud_calls": 0,
+  "excluded": [
+    "Git history/metadata",
+    "credentials and original private configuration",
+    "original course materials",
+    "raw Avro/base64 and full forensic captures",
+    "private historical state documents and identity readbacks",
+    "cloud mutation helpers and SDK runtimes",
+    "prototypes and proposal-only SQL11/12"
+  ],
+  "independent_tools_available": {
+    "gitleaks": false,
+    "trufflehog": false,
+    "detect-secrets": false
+  },
+  "audit_limit": "Package-specific privacy/entropy/manifest/evidence checks are not a universal secret/PII certificate; human review required"
+}

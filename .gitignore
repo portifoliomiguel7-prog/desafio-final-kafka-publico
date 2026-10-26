@@ -1,0 +1,17 @@
+# Credenciais locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Tempor?rios locais; evid?ncias revisadas continuam version?veis
+.local/
+.tmp/
+*.log
+__pycache__/
+*.pyc
+
+# Materiais originais locais do curso
+.course-context/

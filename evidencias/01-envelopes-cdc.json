@@ -1,0 +1,222 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/01-envelopes-cdc.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "fbc9d15a7abfc54effcb925058bff6d3c5fc2a1d1bb8d7377c1baf6e61a7009c"
+    },
+    {
+      "private_path": "evidencias/H05/01-envelopes-cdc.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "99eab44d8ac8cadb7d937045791e3b7b222c9035dce5df0310b6d528cb03164f"
+    }
+  ],
+  "data": {
+    "events": [
+      {
+        "action_id": "INSERT_TRANSACTION",
+        "historical_status": "PASS",
+        "event": {
+          "event_id": "desafio.payments.transactions:0:2000",
+          "topic": "desafio.payments.transactions",
+          "partition": 0,
+          "offset": 2000,
+          "key": {
+            "transaction_id": 100001
+          },
+          "key_sha256": "772d93fda79686da6d575953d9e2a2a914c2227f861795829e04f8714bc7e79a",
+          "schema_ids": {
+            "key": 100007,
+            "value": 100008
+          },
+          "kafka_timestamp": [
+            1,
+            1790962037855
+          ],
+          "observed_at": "2026-10-02T17:26:15.947002+00:00",
+          "value": {
+            "before": null,
+            "after": {
+              "transaction_id": 100001,
+              "card_id": 199,
+              "account_id": 1,
+              "merchant_id": 1,
+              "amount": "123.45",
+              "currency": "BRL",
+              "status": "APPROVED",
+              "occurred_at": "2026-01-10T12:00:00.000000Z",
+              "created_at": "2026-01-10T12:00:00.000000Z",
+              "updated_at": "2026-01-10T12:00:00.000000Z"
+            },
+            "source": {
+              "version": "3.2.5.Final",
+              "connector": "postgresql",
+              "name": "desafio",
+              "ts_ms": 1790962037392,
+              "snapshot": "false",
+              "db": "neondb",
+              "sequence": "[null,\"30145192\"]",
+              "schema": "payments",
+              "table": "transactions",
+              "txId": 3140,
+              "lsn": 30145192,
+              "xmin": null
+            },
+            "op": "c",
+            "ts_ms": 1790962037494,
+            "transaction": null
+          }
+        }
+      },
+      {
+        "action_id": "UPDATE_ACCOUNT",
+        "historical_status": "PASS",
+        "event": {
+          "event_id": "desafio.payments.accounts:0:240",
+          "topic": "desafio.payments.accounts",
+          "partition": 0,
+          "offset": 240,
+          "key": {
+            "account_id": 1
+          },
+          "key_sha256": "e041f1b2805e3cf0138f55767d37e1839f3a4e15fdcfe2fa76d841fdc66f9305",
+          "schema_ids": {
+            "key": 100003,
+            "value": 100004
+          },
+          "kafka_timestamp": [
+            1,
+            1790962042866
+          ],
+          "observed_at": "2026-10-02T17:26:20.915697+00:00",
+          "value": {
+            "before": {
+              "account_id": 1,
+              "customer_id": 43,
+              "status": "ACTIVE",
+              "balance": "1036.13",
+              "currency": "BRL",
+              "created_at": "2026-01-02T00:00:00.000000Z",
+              "updated_at": "2026-01-02T00:00:00.000000Z"
+            },
+            "after": {
+              "account_id": 1,
+              "customer_id": 43,
+              "status": "SUSPENDED",
+              "balance": "1036.13",
+              "currency": "BRL",
+              "created_at": "2026-01-02T00:00:00.000000Z",
+              "updated_at": "2026-01-10T12:01:00.000000Z"
+            },
+            "source": {
+              "version": "3.2.5.Final",
+              "connector": "postgresql",
+              "name": "desafio",
+              "ts_ms": 1790962042418,
+              "snapshot": "false",
+              "db": "neondb",
+              "sequence": "[\"30145840\",\"30145968\"]",
+              "schema": "payments",
+              "table": "accounts",
+              "txId": 3141,
+              "lsn": 30145968,
+              "xmin": null
+            },
+            "op": "u",
+            "ts_ms": 1790962042562,
+            "transaction": null
+          }
+        }
+      },
+      {
+        "action_id": "DELETE_TRANSACTION",
+        "historical_status": "PASS",
+        "event": {
+          "event_id": "desafio.payments.transactions:0:2001",
+          "topic": "desafio.payments.transactions",
+          "partition": 0,
+          "offset": 2001,
+          "key": {
+            "transaction_id": 100001
+          },
+          "key_sha256": "772d93fda79686da6d575953d9e2a2a914c2227f861795829e04f8714bc7e79a",
+          "schema_ids": {
+            "key": 100007,
+            "value": 100008
+          },
+          "kafka_timestamp": [
+            1,
+            1790962047906
+          ],
+          "observed_at": "2026-10-02T17:26:25.057218+00:00",
+          "value": {
+            "before": {
+              "transaction_id": 100001,
+              "card_id": 199,
+              "account_id": 1,
+              "merchant_id": 1,
+              "amount": "123.45",
+              "currency": "BRL",
+              "status": "APPROVED",
+              "occurred_at": "2026-01-10T12:00:00.000000Z",
+              "created_at": "2026-01-10T12:00:00.000000Z",
+              "updated_at": "2026-01-10T12:00:00.000000Z"
+            },
+            "after": null,
+            "source": {
+              "version": "3.2.5.Final",
+              "connector": "postgresql",
+              "name": "desafio",
+              "ts_ms": 1790962047432,
+              "snapshot": "false",
+              "db": "neondb",
+              "sequence": "[\"30146352\",\"30146472\"]",
+              "schema": "payments",
+              "table": "transactions",
+              "txId": 3142,
+              "lsn": 30146472,
+              "xmin": null
+            },
+            "op": "d",
+            "ts_ms": 1790962047436,
+            "transaction": null
+          }
+        }
+      },
+      {
+        "action_id": "DELETE_TOMBSTONE",
+        "historical_status": "PASS",
+        "event": {
+          "event_id": "desafio.payments.transactions:0:2002",
+          "topic": "desafio.payments.transactions",
+          "partition": 0,
+          "offset": 2002,
+          "key": {
+            "transaction_id": 100001
+          },
+          "key_sha256": "772d93fda79686da6d575953d9e2a2a914c2227f861795829e04f8714bc7e79a",
+          "schema_ids": {
+            "key": 100007,
+            "value": null
+          },
+          "kafka_timestamp": [
+            1,
+            1790962047906
+          ],
+          "observed_at": "2026-10-02T17:26:25.065780+00:00",
+          "value": null,
+          "operation": "TOMBSTONE",
+          "delete_event_id": "desafio.payments.transactions:0:2001"
+        }
+      }
+    ],
+    "run_id": "20261002T172524Z-f166c766",
+    "offset_commits": false,
+    "historical_status": "PASS"
+  }
+}

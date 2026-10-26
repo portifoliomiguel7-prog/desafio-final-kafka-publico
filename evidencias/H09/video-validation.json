@@ -1,0 +1,27 @@
+{
+  "task": "H09",
+  "checked_on": "2026-10-26",
+  "check_scope": "LOCAL_FILE_HASHES_AND_PREVIOUS_VALIDATION_REPORT",
+  "generation_date": "2026-10-24",
+  "script_revision": "20261024-conversa-v2",
+  "status": "RECORDED_AND_NARRATED_AWAITING_EDITORIAL_REVIEW",
+  "scenes": 7,
+  "speech_blocks": 31,
+  "video_seconds": 630.165,
+  "final_file": "video-completo-voz-miguel.mp4",
+  "final_bytes": 25783659,
+  "final_sha256": "81a06327be59fcfe873e4a2c7353a1264e246c7726b4188cdac1527e8771bf4a",
+  "manifest_file_hashes": "PASS",
+  "manifest_entries_checked": 18,
+  "full_decode_previous_report": "PASS (renderer logs preserved)",
+  "new_decode_on_check_date": false,
+  "media_published": false,
+  "voice_reference_included": false,
+  "repair": "Restored missing delivery filename by copying a byte-identical renamed file; the renamed file was preserved.",
+  "limits": [
+    "Historical walkthrough, not a new end-to-end runtime proof.",
+    "CDC shows Failed; the displayed transaction is a snapshot.",
+    "P1 is historical; no new alert was generated during recording.",
+    "Editorial review and possible new runtime capture remain separate steps."
+  ]
+}

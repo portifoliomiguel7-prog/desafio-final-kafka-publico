@@ -1,0 +1,61 @@
+{
+  "kind": "SANITIZED_HISTORICAL_SELECTION",
+  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "not_a_new_execution": true,
+  "raw_wire_payloads_included": false,
+  "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
+  "private_provenance": [
+    {
+      "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/historical-N1-verification.json",
+      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "source_sha256_lf": "d99e4c5e441419e7c7aa723cc27d875fed053460304a8d77a09d02188ae09d17"
+    }
+  ],
+  "data": {
+    "status": "PASS",
+    "rows": [
+      {
+        "transaction_id": 104001,
+        "card_id": 1,
+        "account_id": 43,
+        "merchant_id": 1,
+        "amount": "20.11",
+        "currency": "BRL",
+        "status": "APPROVED",
+        "occurred_at": "2026-10-07T18:59:17.195+00:00",
+        "created_at": "2026-10-07T18:59:17.195+00:00",
+        "updated_at": "2026-10-07T18:59:17.195+00:00"
+      },
+      {
+        "transaction_id": 104002,
+        "card_id": 1,
+        "account_id": 43,
+        "merchant_id": 1,
+        "amount": "21.11",
+        "currency": "BRL",
+        "status": "DECLINED",
+        "occurred_at": "2026-10-07T18:59:37.195+00:00",
+        "created_at": "2026-10-07T18:59:37.195+00:00",
+        "updated_at": "2026-10-07T18:59:37.195+00:00"
+      },
+      {
+        "transaction_id": 104003,
+        "card_id": 11,
+        "account_id": 53,
+        "merchant_id": 1,
+        "amount": "0.99",
+        "currency": "BRL",
+        "status": "APPROVED",
+        "occurred_at": "2026-10-07T19:01:37.195+00:00",
+        "created_at": "2026-10-07T19:01:37.195+00:00",
+        "updated_at": "2026-10-07T19:01:37.195+00:00"
+      }
+    ],
+    "all_inside_captured_boundary": true,
+    "current_read_reached_high": true,
+    "elapsed_since_last_creation_ms": 18205042,
+    "new_alerts": 0,
+    "health_limit": "RUNNING at both checkpoint readbacks with same creation_date; continuous telemetry not available",
+    "reason": "Full historical Avro read through current high, exact three distinct cards plus planned advancer, subsequent observed healthy state and absence of any N2 witnesses in all alerts; closes interrupted observation without DML"
+  }
+}
