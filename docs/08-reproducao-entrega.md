@@ -1,11 +1,11 @@
 # Reconstrução manual e preparação local
 
-Este pacote não tem `.git`, credenciais, capturas integrais, SDKs cloud ou helpers privados. Scripts incluídos só validam/preparam arquivos locais. Evidence files são SANITIZED_HISTORICAL_SELECTION, não provas de deploy deste pacote.
+O repositório público contém uma seleção sanitizada, sem o histórico privado, credenciais, capturas integrais, SDKs cloud ou helpers privados. Uma exportação de arquivos não inclui `.git`; um clone público inclui somente seu novo histórico sanitizado. Scripts incluídos só validam/preparam arquivos locais. Evidence files são SANITIZED_HISTORICAL_SELECTION, não provas de deploy deste pacote.
 
 ## Começar do zero
 
 1. Descompactar/copiar o pacote em diretório novo; não sobrepor o laboratório existente. Usar Bash/Git Bash e Python 3.10+.
-2. `bash harness/checks/verify.sh --strict-export` confere a seleção, hashes, links, privacidade e dados CDC/P1/B1/Billing sem rede.
+2. Em clone Git, `bash harness/checks/verify.sh` confere a seleção, hashes, links, privacidade e dados CDC/P1/B1/Billing sem rede, ignorando `.git` e runtime local. Em exportação sem Git/configuração privada, usar `bash harness/checks/verify.sh --strict-export`, que rejeita `.git`, `.env` e `.local`.
 3. `bash setup.sh --check` verifica as fontes; `bash setup.sh --prepare` cria `.env` somente se ausente e `.local/delivery/preparation.json`. Defaults do template não são credenciais. Targets symlink são recusados; não há flag deploy/apply.
 4. Testes do setup: depois de preparar, `python -m unittest discover -s harness/checks -p 'test_h09_prepare.py'`. Arquivos `.env`/`.local` criados pelo usuário nunca devem ser redistribuídos; `--strict-export` rejeita a presença deles. Para conferir somente fontes após preparação: `bash harness/checks/verify.sh`.
 

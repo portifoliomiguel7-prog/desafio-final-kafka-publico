@@ -19,12 +19,20 @@ PostgreSQL mantém o modelo relacional dos pagamentos; Neon foi o serviço geren
 
 ## Verificação local
 
-Git Bash/Bash e Python 3.10+ são suficientes; não há Git history neste pacote. Antes de configurar credenciais:
+Git Bash/Bash e Python 3.10+ são suficientes. O repositório público começa com uma seleção sanitizada, sem o histórico privado. Antes de configurar credenciais:
 
 ```bash
-bash harness/checks/verify.sh --strict-export
+bash harness/checks/verify.sh
 bash setup.sh --check
 ```
+
+Saída real do verificador local em 26/10/2026:
+
+```json
+{"status": "PASS_PUBLIC_CANDIDATE_LOCAL_CHECK", "files": 46, "JSONs": 16, "links": 33, "privacy_policy": "PASS", "CDC_P1_B1_Billing": "PASS", "cloud_calls": 0, "limits": "Selection only; no wire replay, cloud reconstruction or universal secret/PII certification"}
+```
+
+O pacote fixa finais de linha LF em `.gitattributes`, para que os hashes do manifesto permaneçam iguais após clone no Windows ou Linux. No checkout Git, o modo normal ignora somente metadados `.git` e configuração/runtime locais; o modo `--strict-export` exige uma exportação sem `.git`, `.env` ou `.local`. A verificação é local; não comprova reconstrução cloud.
 
 `bash setup.sh --prepare` cria somente `.env` ausente e manifesto local ignorado; preserva configuração existente. Não instala dependências ou provisiona serviços. [Guia](docs/08-reproducao-entrega.md) explica o caminho manual cloud; reprodução automática completa **não comprovada**. O SQL/dataset são arquivos reais do projeto; configurações de identidade são placeholders, jamais IDs prontos para usar.
 

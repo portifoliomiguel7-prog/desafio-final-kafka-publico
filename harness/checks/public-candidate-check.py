@@ -25,7 +25,7 @@ def check(root, strict=False):
         relative = path.relative_to(root).as_posix()
         if path.is_symlink():
             raise ValueError('Symlink rejected: ' + relative)
-        private = relative == '.env' or relative.startswith('.local/') or relative == '.local'
+        private = (relative in {'.env', '.local', '.git'} or relative.startswith(('.local/', '.git/')))
         if private and not strict:
             continue
         if path.is_file():
