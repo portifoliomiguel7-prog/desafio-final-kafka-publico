@@ -1,6 +1,6 @@
 {
   "H09": "PARTIAL — PUBLIC_RELEASE_CANDIDATE_PREPARED",
-  "source_git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "source_git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
   "publication": "AUTHORIZED_SANITIZED_EXPORT",
   "public_repository": "portifoliomiguel7-prog/desafio-final-kafka-publico",
   "original_repository": "PRIVATE",
@@ -19,7 +19,7 @@
       "private_sources": [
         {
           "private_path": ".gitignore",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "5d19ce1a364c7c5c00bfe2343520fded1e012bee370f76cab5f7435c9a1a5cd8"
         }
       ]
@@ -30,7 +30,7 @@
       "private_sources": [
         {
           "private_path": ".env.example",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "e7b835fdb2dc5a3d32476cc41553fab548ff4431a7298d4dc2c4dc02afe1241e"
         }
       ]
@@ -41,7 +41,7 @@
       "private_sources": [
         {
           "private_path": "setup.sh",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "006bff930bdb441fba009e4e794218eab26a95113f8c306cdd1a943ba35915b2"
         }
       ]
@@ -52,7 +52,7 @@
       "private_sources": [
         {
           "private_path": "teardown.sh",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "a6afab777d303f40a9eeb9090f59d1d01c3a1c243cfaa31cd4a665af03df5e6d"
         }
       ]
@@ -63,7 +63,7 @@
       "private_sources": [
         {
           "private_path": "requirements-offline.txt",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "b8bc18085da074cdbfe19cc30c0d5701f89cf0b2566fd310e27144e6744de1c5"
         }
       ]
@@ -74,7 +74,7 @@
       "private_sources": [
         {
           "private_path": "connectors/cdc.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "690671c9cb6bb304f66241665e697a49ff3de3a5e1def6b7561ac063a7a01d90"
         }
       ]
@@ -85,19 +85,19 @@
       "private_sources": [
         {
           "private_path": "harness/checks/h09-prepare.py",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "d8b6291353d6cc13fcd8b285d00ac7a825b66be9287f9a3df01f693a389810e9"
         }
       ]
     },
     "harness/checks/test_h09_prepare.py": {
-      "export_sha256": "651897d76adc148d77d37548d951ae0ea7f2cc3ab8c371f5c1668c03a3f12f06",
+      "export_sha256": "d25345415a84c3bbe7f8f006080d0e5db62addd411d0933c27bf4c5fbfab2783",
       "transformation": "UNCHANGED_SOURCE",
       "private_sources": [
         {
           "private_path": "harness/checks/test_h09_prepare.py",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
-          "source_sha256_lf": "651897d76adc148d77d37548d951ae0ea7f2cc3ab8c371f5c1668c03a3f12f06"
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
+          "source_sha256_lf": "d25345415a84c3bbe7f8f006080d0e5db62addd411d0933c27bf4c5fbfab2783"
         }
       ]
     },
@@ -107,7 +107,7 @@
       "private_sources": [
         {
           "private_path": "dataset/neon/sql/01_ddl.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "8163da89e3eacc627a188594bf5c2000e5a4286e3afabfb24581427d62894c0c"
         }
       ]
@@ -118,7 +118,7 @@
       "private_sources": [
         {
           "private_path": "dataset/neon/sql/02_seed.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "deb331ed29dad18316a0f218ac7df625d8ed20953c59ec989b61358535df3dc8"
         }
       ]
@@ -129,7 +129,7 @@
       "private_sources": [
         {
           "private_path": "dataset/neon/sql/03_cdc_setup.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "9e2ab63b71383090d5be447d8a7791cb79fec5d53565446899edef5cac09a72d"
         }
       ]
@@ -140,7 +140,7 @@
       "private_sources": [
         {
           "private_path": "schemas/pedido-v1.avsc",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "4dec0c3df7787f0ceb57cdc8a6bd74ef45e88c695aeeee361a45a2d4221a1106"
         }
       ]
@@ -151,7 +151,7 @@
       "private_sources": [
         {
           "private_path": "schemas/pedido-v2.avsc",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "8f82d1fc4acd243c7b7133fa97eaa3d4f0544c7c3fc35915c86b9d7ee1629738"
         }
       ]
@@ -162,7 +162,7 @@
       "private_sources": [
         {
           "private_path": "schemas/pedido-v3-quebra.avsc",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "bdeddeaf468d1464dc0c171ebb744448d13d59e0ef11a059ac699d4c634c6cdb"
         }
       ]
@@ -173,7 +173,7 @@
       "private_sources": [
         {
           "private_path": "sql/06-source-primary-keys.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "ccb2738a8869e844a050c5e299c4f11acc7cc17a2465dfdb882b19b503a4bc06"
         }
       ]
@@ -184,7 +184,7 @@
       "private_sources": [
         {
           "private_path": "sql/07-enriched-table.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "bcfabf2564769376f1729c4dce3c017de08cd5eba247ef523d0f782021a1c504"
         }
       ]
@@ -195,7 +195,7 @@
       "private_sources": [
         {
           "private_path": "sql/08-enrichment.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "f32b143512fb6894a5bde9d18818ef9f9969192dd61c510d36bdd0a23c5d8e71"
         }
       ]
@@ -206,7 +206,7 @@
       "private_sources": [
         {
           "private_path": "sql/09a-fraud-events-table.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "0871fc54f1d541dbe8ffcc86fe4777a97563b4df758f1be20bf408f8a49f0e08"
         }
       ]
@@ -217,7 +217,7 @@
       "private_sources": [
         {
           "private_path": "sql/09b-fraud-events-bridge.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "eeddcf8ae45f9bbad05b4c6eeba16021d8f1a2f72daf2742de40822856067524"
         }
       ]
@@ -228,7 +228,7 @@
       "private_sources": [
         {
           "private_path": "sql/10a-fraud-detected-table.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "d6be4a37e63e41c1d800f541f5d7203d934cc4c228a7b913d9289548ccad3094"
         }
       ]
@@ -239,7 +239,7 @@
       "private_sources": [
         {
           "private_path": "sql/10b-fraud-match.sql",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "da3f5a49c67172bdae8326cb4c530b49cf5737deaee0d0728439111a637b04cb"
         }
       ]
@@ -301,169 +301,169 @@
       "private_sources": []
     },
     "evidencias/H01/access-tests.json": {
-      "export_sha256": "bdbce58b0f724e54b180f4cbea74551f1ef3aca9656a008706f32763dfb68a7b",
+      "export_sha256": "86984ccb9be681df124432c01253161f34c3b0c169b7a693aaaa15ef882631ab",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H01/04-access-tests.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "09997ac2f339f953b796bac624b879307837e6868bdd7779295baafcd1bc1ea4"
         }
       ]
     },
     "evidencias/H02/avro-compatibility.json": {
-      "export_sha256": "ffdfc345457a40600774aa087f9a5e93a21649238dee5a84bb99bf0bdf7005dd",
+      "export_sha256": "58cb34f4a79a70037da1bbd34512762a72912384512e08295ee544405bef42d4",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H02/contract-results.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "12d61ef49eaa2dcc812cb598e458eb3530196544e895e5336c5e636a5b427a86"
         }
       ]
     },
     "evidencias/H03/database.json": {
-      "export_sha256": "7f5e921a4f2a547767b06a6165e3b8291464dcd91390c57acc97238d7a323886",
+      "export_sha256": "f52bf058aaa7c396f423016ff75792502505bf58669c074df91af0f7ab3c7480",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H03/database-results.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "fbd1663282e34080c20e97675f1a91a33b758b07ba87506133aaa96476e6e310"
         }
       ]
     },
     "evidencias/H04/connector.json": {
-      "export_sha256": "57e1b6995189a7cccbf99b1c23c67c321549704668ca53960fffb879be07bc61",
+      "export_sha256": "64681acb0040eac56c41d2ffc3e8824227b69ec73fb8f27230244cb28fe32f1c",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H04/connector.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "6e454312d24e152bfab448baba4af983d733ab919d784790dbc3acc0067db067"
         }
       ]
     },
     "evidencias/01-envelopes-cdc.json": {
-      "export_sha256": "10f3f00494855a2f6387bc3f6cc1e68d9cef813da15a529f28c4cae6f0449932",
+      "export_sha256": "a90acc6e13c572fd4fcb87ed5ac667037043116b277deb328e875394cb51cb4f",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/01-envelopes-cdc.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "fbc9d15a7abfc54effcb925058bff6d3c5fc2a1d1bb8d7377c1baf6e61a7009c"
         },
         {
           "private_path": "evidencias/H05/01-envelopes-cdc.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "99eab44d8ac8cadb7d937045791e3b7b222c9035dce5df0310b6d528cb03164f"
         }
       ]
     },
     "evidencias/H06/enrichment.json": {
-      "export_sha256": "219581c290725d13632c7559a47a9ee617cb2b038bfab91b00af66cc5a11c6ed",
+      "export_sha256": "882939e9143aeeeada448837c35ec7f2ff54a160cbcbcbc4784a5c3bf9233c6a",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H06/enrichment-gate.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "3d0db2b3cc9c1d25e26c1db18e26d982abe9391642c4137cd056296471370371"
         }
       ]
     },
     "evidencias/H07/P1.json": {
-      "export_sha256": "8319f770e0f396a32182d48d744b13795636542edd8a14548aa06d29ddc043a1",
+      "export_sha256": "f7ce60e570ff9d7ec1a7454be3573028e2c9230cc96eaed2b950d76d5999d1ed",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/resume-fraud-raw-decoded.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "18c13764145fa04910c32ac1118d9c4e6169129a0f7f5d57c41d1406fcbd618f"
         },
         {
           "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/P1-insert-result.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "af34a346ccbf8045cd1303b7531646500d04309d2f81e0d32b1f91414825313d"
         },
         {
           "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/resume-P1-alert-verification.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "a6168ea3d6f692bc1ba1ea1e455c8dec9620935385b1301d09736b493068ee76"
         },
         {
           "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/P1-before.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "0c349cc43ab36154b19f33393f782ff3b9bf8f8af2c126a5a9334b15802a0412"
         },
         {
           "private_path": "evidencias/H07/runtime-runs/20261007T113432Z-f39cbac0/activation-boundary.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "c0c6440b609df16d6484c704cb145dda8f8f26f3ecaab9f55e70b394e553f130"
         }
       ]
     },
     "evidencias/H07/N1.json": {
-      "export_sha256": "798ba7e8f2213ea779631a802bee44e6dca85e09e47e37ba3f0559f0c77447c4",
+      "export_sha256": "5995e29c7c056bb361c91299405f66bebf8d3d4e5d00eefaae8aa969400a6535",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/historical-N1-verification.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "d99e4c5e441419e7c7aa723cc27d875fed053460304a8d77a09d02188ae09d17"
         }
       ]
     },
     "evidencias/H07/N2.json": {
-      "export_sha256": "dee1ac46adbec5e63b5b60fc0aeb6b61751cf03c5289c628d4c3adb78d8eab06",
+      "export_sha256": "cd2b74355f55e18b97e7f7eba25eef9738ea7448921417acfda862bf37f30807",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/historical-N2-verification.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "38fbcc04fde9e058d2677a5ccba5a86453092b769f35f9d70e50bfc96416d06d"
         }
       ]
     },
     "evidencias/H07/B1.json": {
-      "export_sha256": "f4f2cebeaec7225153ebab19b391e177aa1f91b41ec157dcea9697e81da0c13e",
+      "export_sha256": "427b319ff4deade964a313d224a5cff8bfe4c99e7f211e98be7e376d5d2838a8",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H07/runtime-boundary-runs/20261007T235407Z-001d91aa/B1-diagnostic.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "64ecd352ecf9a14283e9a5b060a27b0bcc833add6f12f2fab8132c0c21bd05d6"
         }
       ]
     },
     "evidencias/H08/billing.json": {
-      "export_sha256": "5cde32bdd2b7e7261982b722efc45cf3ce85e1513896362a532c694bac03fc2b",
+      "export_sha256": "576300895f081afa38d528feb2c3e4a6dbbee59809d463f08026811bf9f4211d",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H08/billing.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "f3dc4a768ceb11883008aafbeb79832ef9e45f933a1b03a914d767655fdc90d5"
         }
       ]
     },
     "evidencias/H08/security.json": {
-      "export_sha256": "77476b52c87dac8f4ebb3d102f4b730d6ae4362fd16df3770737e4d1f3605bd0",
+      "export_sha256": "82e7792e5772219fe4834edfc5d5bc39852ab9813981cfef4c12fba446bf4752",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H08/security-inventory.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "7a034c9a243b204a952f6164416d90d3578845e4fe15e8a3b61d3a5d4f242fb0"
         }
       ]
     },
     "evidencias/H08/observability.json": {
-      "export_sha256": "c7c301fb27bf53f248987c2ba1bcc8c747a3630a84a44b0e458665967cd2d7ee",
+      "export_sha256": "d666b41846138839a9a0be69e5841a01f90ebb7656fb9bf96c8a7f4e18fd8f74",
       "transformation": "SELECTED_AND_SANITIZED_HISTORICAL_EVIDENCE",
       "private_sources": [
         {
           "private_path": "evidencias/H08/observability.json",
-          "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+          "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
           "source_sha256_lf": "21c30e5251f4389d8638e13500e6ad33a4e4c98f0b926eab20d53e48f1046ee1"
         }
       ]

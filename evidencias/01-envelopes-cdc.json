@@ -1,18 +1,18 @@
 {
   "kind": "SANITIZED_HISTORICAL_SELECTION",
-  "base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+  "base": "6663241866b553695f3406dbfa63d38cbb60e208",
   "not_a_new_execution": true,
   "raw_wire_payloads_included": false,
   "sanitization": "Infrastructure identities/locators redacted or aliased; selected synthetic business facts preserved",
   "private_provenance": [
     {
       "private_path": "evidencias/01-envelopes-cdc.json",
-      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
       "source_sha256_lf": "fbc9d15a7abfc54effcb925058bff6d3c5fc2a1d1bb8d7377c1baf6e61a7009c"
     },
     {
       "private_path": "evidencias/H05/01-envelopes-cdc.json",
-      "git_base": "07c65751b5eed8431180978a2c716723dbf08cc9",
+      "git_base": "6663241866b553695f3406dbfa63d38cbb60e208",
       "source_sha256_lf": "99eab44d8ac8cadb7d937045791e3b7b222c9035dce5df0310b6d528cb03164f"
     }
   ],

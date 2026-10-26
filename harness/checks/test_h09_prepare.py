@@ -15,6 +15,7 @@ spec.loader.exec_module(prep)
 
 class PreparationTests(unittest.TestCase):
     def setUp(self):
+        (ROOT / '.local').mkdir(exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(prefix='h09-test-', dir=ROOT / '.local')
         self.root = Path(self.temp.name).resolve()
         assert self.root.is_relative_to((ROOT / '.local').resolve())
